@@ -1,0 +1,41 @@
+.Select-control {
+    background-color: #F8F9FA;
+}
+  
+.divBorder{
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px 2px lightgrey;
+}
+
+.divBorderInput{
+    padding: 14px;
+    background-color: transparent;
+}
+
+.divBorderHigher{
+    padding: 15px;
+    background-color: transparent;
+    border: 1px solid #f3f3f3;
+}
+
+.divBorderLower{
+    background-color: #f3f3f3;
+}
+
+.Select-menu-outer {
+    background-color: #F8F9FA;
+}
+
+#tipo_sociedade_dropdown .VirtualizedSelectFocusedOption {
+    background: #F8F9FA;
+    background-color: #DEE2E6;
+    color: #343A40;
+}
+
+#tipo_sociedade_dropdown_1 .VirtualizedSelectFocusedOption {
+    background: #F8F9FA;
+    background-color: #DEE2E6;
+    color: #343A40;
+}
+

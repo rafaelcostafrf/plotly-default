@@ -1,0 +1,19 @@
+body {
+    font-family: arvo;
+    color: rgb(53, 53, 53);
+    background-color: transparent;
+    text-align: left;
+    background: #f3f3f3;
+}
+
+h1 {
+    color: rgb(53, 53, 53);
+    background-color: transparent;
+    text-align: center;
+}
+
+h2, h3, h4, h5, h6 {
+    color: rgb(53, 53, 53);
+    background-color: transparent;
+    text-align: left;
+}
