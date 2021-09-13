@@ -114,7 +114,7 @@ app.layout = html.Div(children=[
             ], className='divBorder')
         ]),
 
-        dcc.Tab(label='Análise ML', children=[
+        dcc.Tab(label='Análise Machine Learning', children=[
             *ml_layout,
         ]),
     ])
