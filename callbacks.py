@@ -49,7 +49,6 @@ def update_graph(year):
 @app.callback(
     Output('default_probability', 'figure'),
     Input('opcao_tributaria', 'value'),
-    Input('tipo_sociedade', 'value'),
     Input('default_3months', 'value'),
     Input('valor_vencido', 'value'),
     Input('valor_por_vencer', 'value'),
@@ -62,7 +61,6 @@ def update_graph(year):
     )
 def ml_callback(
     opcao_tributaria, 
-    tipo_sociedade, 
     default_3months, 
     valor_vencido,
     valor_por_vencer,
@@ -73,9 +71,6 @@ def ml_callback(
     valor_protestos,
     quant_protestos):
 
-    coop = 1 if tipo_sociedade == 'tipo_sociedade_cooperativa' else 0
-    emp_ind = 1 if tipo_sociedade == 'tipo_sociedade_empresa individual respons limitada empresaria' else 0
-    lucro = 1 if opcao_tributaria == 'opcao_tributaria_lucro real' else 0
     simples = 1 if opcao_tributaria == 'opcao_tributaria_simples nacional' else 0
 
     
@@ -89,10 +84,7 @@ def ml_callback(
         'valor_total_pedido': [valor_total_pedido], 
         'ioi_3months': [ioi_3months], 
         'valor_protestos': [valor_protestos], 
-        'tipo_sociedade_empresa individual respons limitada empresaria': [emp_ind], 
-        'quant_protestos': [quant_protestos], 
-        'opcao_tributaria_lucro real': [lucro], 
-        'tipo_sociedade_cooperativa': [coop]}
+        'quant_protestos': [quant_protestos]}
 
     wait = True
     prob = [[0, 0]]

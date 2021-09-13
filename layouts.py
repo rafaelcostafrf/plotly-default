@@ -23,27 +23,12 @@ ml_layout = [
                 id = 'opcao_tributaria',
                 options=[
                     {'label': 'Simples Nacional', 'value': 'opcao_tributaria_simples nacional'},
-                    {'label': 'Lucro Real', 'value': 'opcao_tributaria_lucro real'},
                     {'label': 'Outro', 'value': 'outro'},
                 ], 
                 value='outro'),
             ], 
             className='divBorderInput', style={'width': '45%', 'display': 'inline-block'}),
             
-            html.Div(children=[
-                html.Div(children='Tipo Sociedade'),
-                html.Br(),
-                dcc.RadioItems(
-                id='tipo_sociedade',
-                options=[
-                    {'label': 'Empr. Indiv. Respons. Limitada', 'value': 'tipo_sociedade_empresa individual respons limitada empresaria'},
-                    {'label': 'Cooperativa', 'value': 'tipo_sociedade_cooperativa'},
-                    {'label': 'Outro', 'value': 'outro'},
-                ], 
-                value='outro'),
-            ], 
-            className='divBorderInput', style={'width': '45%', 'display': 'inline-block'}),
-
             *gen_number_input(id_name='valor_total_pedido', title='Valor Total do Pedido'),
             *gen_number_input(id_name='valor_quitado', title='Valor Quitado'),
             *gen_number_input(id_name='valor_por_vencer', title='Valor por vencer'),
